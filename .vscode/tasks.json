@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "debug"
+                "debug.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
