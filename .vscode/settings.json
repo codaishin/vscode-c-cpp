@@ -1,7 +1,14 @@
 {
+	// General Settings
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"editor.formatOnSave": true,
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
+	// C/C++ Extension
+	"C_Cpp.default.cStandard": "c89",
+	// C/C++ Clang Command Adapter
+	"clang.cflags": [
+		"--std=c89",
+	]
 }
