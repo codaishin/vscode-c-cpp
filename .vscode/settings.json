@@ -6,9 +6,9 @@
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
 	// C/C++ Extension
-	"C_Cpp.default.cStandard": "c89",
+	"C_Cpp.default.cStandard": "c99",
 	// C/C++ Clang Command Adapter
 	"clang.cflags": [
-		"--std=c89",
+		"--std=c99",
 	]
 }
