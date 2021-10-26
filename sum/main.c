@@ -16,8 +16,8 @@ int main(int argc, char *argv[]) {
 	char *argument_1 = argv[1];
 	for (int i = 0; argument_1[i] != '\0'; ++i) {
 		digit = (int)argument_1[i] - (int)'0';
-		n1 *= 10;			// n1 = n1 * 10
-		n1 += digit;	// n1 = n1 + digit
+		n1 *= 10;
+		n1 += digit;
 	}
 
 	// convert n2
