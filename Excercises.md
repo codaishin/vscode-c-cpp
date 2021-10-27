@@ -71,7 +71,7 @@ Optional:
   sondern können genutzt werden
 
 
-# 4 str_cmp
+# 3 str_cmp
 
 String compare function.
 
@@ -85,7 +85,7 @@ Rückgaben:
 - `1`: strings waren ungleich
 - `2`: strings waren ungleich lang
 
-Beispie:
+Beispiel:
 ```console
 > ./a.out hello world
 > "hello" und "world" sind unterschiedlich
@@ -95,4 +95,47 @@ Beispie:
 
 > ./a.out hello hello
 > "hello" und "hello" sind gleich
+```
+
+
+# 4 print_nums
+
+Print funktion, die int[] printed.
+
+Code-Ausgangspunkt:
+```c
+void int print_nums(int[] numbers) { ... }
+```
+
+Rückgaben:
+- Keine
+
+Beispiel:
+```console
+> ./a.out 2 3 10
+> [2, 3, 10]
+```
+
+Optional:
+- `void int print_nums(int[] numbers, char delim[]) { ... }`:
+  `delim` ist ein delimiter, den die Funktion nutzt, um Zahlen
+	beim printen voneinader abzugrenzen
+
+
+# 5 mutliply
+
+Multiply funktion.
+
+Code-Ausgangspunkt:
+```c
+int mutliply(int[] numbers) { ... }
+```
+
+Rückgaben:
+- Ergebnis der multiplizierten Zahlen
+
+Beispiel:
+```console
+> ./a.out 2 3 10
+> 30
 ```
