@@ -40,3 +40,59 @@ Strategie:
 Optional:
 - änderbare Reihenfolge
 - andere Validierungen
+
+
+# 3 Power
+
+Program mit exponent funktionalität
+
+Code Ausgangspunkt:
+```c
+int main(int argc, char* argv[]) {
+	int base = str_to_int(argv[1]);	 // nur erste ziffer zu int
+	int power = str_to_int(argv[2]);
+	int result = math_power(base, power);
+	printf("result: %i\n", result);
+	return 0;
+}
+```
+
+Beispie:
+```console
+> ./a.out 2 3
+> 8
+```
+
+Optional:
+- Zahlen mit mehr als einer Ziffer
+- Fehlermeldungen bei fehlerhaften Eingaben
+  (einschließlich negatover exponent)
+- Negative Exponenten sind keine Fehler mehr,
+  sondern können genutzt werden
+
+
+# 4 str_cmp
+
+String compare function.
+
+Code-Ausgangspunkt:
+```c
+int str_cmp(char[] a, char[] b) { ... }
+```
+
+Rückgaben:
+- `0`: strings waren gleich
+- `1`: strings waren ungleich
+- `2`: strings waren ungleich lang
+
+Beispie:
+```console
+> ./a.out hello world
+> "hello" und "world" sind unterschiedlich
+
+> ./a.out hello world!
+> "hello" und "world!" sind unterschiedlich lang
+
+> ./a.out hello hello
+> "hello" und "hello" sind gleich
+```
