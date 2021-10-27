@@ -78,6 +78,15 @@ String compare function.
 Code-Ausgangspunkt:
 ```c
 int str_cmp(char[] a, char[] b) { ... }
+
+int main() {
+	char str1[] = ...;
+	char str2[] = ...;
+	if (str_cmp(str1, str2) == 0) {
+		printf(...);
+	}
+
+}
 ```
 
 Rückgaben:
@@ -104,7 +113,7 @@ Print funktion, die int[] printed.
 
 Code-Ausgangspunkt:
 ```c
-void int print_nums(int[] numbers) { ... }
+void print_nums(int[] numbers) { ... }
 ```
 
 Rückgaben:
@@ -117,7 +126,7 @@ Beispiel:
 ```
 
 Optional:
-- `void int print_nums(int[] numbers, char delim[]) { ... }`:
+- `void print_nums(int[] numbers, char delim[]) { ... }`:
   `delim` ist ein delimiter, den die Funktion nutzt, um Zahlen
 	beim printen voneinader abzugrenzen
 
