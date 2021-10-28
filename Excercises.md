@@ -148,3 +148,39 @@ Beispiel:
 > ./a.out 2 3 10
 > 30
 ```
+
+# 6(7) str to int
+
+In Übung zum Addieren von 2 Zahlen (in diesem repo im Ordenr `sum`):
+
+Folgender codeabschnitte als seperate Funktionen implementieren.
+
+```c
+char *argument_1 = argv[1];
+is_neg = argument_1[0] == '-' ? 1 : 0;	// if '-' then 1 else 0
+...
+if (is_neg) {
+	n1 *= -1;
+}
+
+char *argument_2 = argv[2];
+is_neg = argument_2[0] == '-' ? 1 : 0;
+...
+if (is_neg) {
+	n2 *= -1;
+}
+```
+
+Zum Beispiel so:
+```c
+number_t n1 = str_to_number(argv[1]);
+if (n1.error) {
+	printf("Encountered error %i", n1.error);
+}
+```
+
+mit:
+
+```c
+number_t str_to_number(char str[]) { ... }
+```
