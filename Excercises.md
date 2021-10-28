@@ -180,8 +180,18 @@ if (n1.error) {
 }
 ```
 
-mit:
+mit folgenden Definitionen:
 
 ```c
+typedef enum {
+	NONE = 0;
+	NO_NUMBER = -1;
+} error_t;
+
+typedef struct {
+	int value;
+	error_t error;
+} number_t;
+
 number_t str_to_number(char str[]) { ... }
 ```
