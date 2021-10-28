@@ -176,6 +176,7 @@ Zum Beispiel so:
 number_t n1 = str_to_number(argv[1]);
 if (n1.error) {
 	printf("Encountered error %i", n1.error);
+	return n1.error;
 }
 ```
 
