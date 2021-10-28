@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "compile debug",
-            "command": "/usr/bin/gcc",
+            "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
