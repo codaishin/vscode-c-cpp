@@ -5,6 +5,10 @@
 	"editor.formatOnSave": true,
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
+	"editor.rulers": [
+		79,
+		99
+	],
 	// C/C++ Extension
 	"C_Cpp.default.cStandard": "c99",
 	// C/C++ Clang Command Adapter
