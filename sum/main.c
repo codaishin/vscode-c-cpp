@@ -32,7 +32,6 @@ int main(int argc, char *argv[]) {
 	number_t n2;
 	int digit = 0;
 
-	// guard argument number
 	if (argc != 3) {
 		printf("Only 2 numbers\n");
 		return -2;
@@ -49,7 +48,6 @@ int main(int argc, char *argv[]) {
 		return n2.error;
 	}
 
-	// sum of n1 and n2
 	printf("%i + %i = %i\n", n1.value, n2.value, n1.value + n2.value);
 	return 0;
 }
