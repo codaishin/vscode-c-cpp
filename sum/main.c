@@ -5,6 +5,23 @@ typedef struct {
 	int error;
 } number_t;
 
+number_t number_with_error(number_t number, int error) {
+	number.value = 0;
+	number.error = error;
+	return number;
+}
+
+number_t number_add_digit(number_t number, char digit) {
+	number.value *= 10;
+	number.value += (int)digit - (int)'0';
+	return number;
+}
+
+number_t number_inverse(number_t number) {
+	number.value *= -1;
+	return number;
+}
+
 number_t str_to_number(char string[]) {
 	int digit;
 	int is_neg = string[0] == '-' ? 1 : 0;	// if '-' then 1 else 0
@@ -12,18 +29,11 @@ number_t str_to_number(char string[]) {
 
 	for (int i = is_neg; string[i] != '\0'; ++i) {
 		if (string[i] > '9' || string[i] < '0') {
-			number.value = 0;
-			number.error = -1;
-			return number;
+			return number_with_error(number, -1);
 		}
-		digit = (int)string[i] - (int)'0';
-		number.value *= 10;
-		number.value += digit;
+		number = number_add_digit(number, string[i]);
 	}
-	if (is_neg) {
-		number.value *= -1;
-	}
-	return number;
+	return is_neg ? number_inverse(number) : number;
 }
 
 int main(int argc, char *argv[]) {
