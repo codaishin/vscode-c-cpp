@@ -1,9 +1,35 @@
 #include <stdio.h>
 
+typedef struct {
+	int value;
+	int error;
+} number_t;
+
+number_t str_to_number(char string[]) {
+	int digit;
+	int is_neg = string[0] == '-' ? 1 : 0;	// if '-' then 1 else 0
+	number_t number = {0, 0};
+
+	for (int i = is_neg; string[i] != '\0'; ++i) {
+		if (string[i] > '9' || string[i] < '0') {
+			number.value = 0;
+			number.error = -1;
+			return number;
+		}
+		digit = (int)string[i] - (int)'0';
+		number.value *= 10;
+		number.value += digit;
+	}
+	if (is_neg) {
+		number.value *= -1;
+	}
+	return number;
+}
+
 int main(int argc, char *argv[]) {
 	int is_neg = 0;
-	int n1 = 0;
-	int n2 = 0;
+	number_t n1;
+	number_t n2;
 	int digit = 0;
 
 	// guard argument number
@@ -12,39 +38,18 @@ int main(int argc, char *argv[]) {
 		return -2;
 	}
 
-	// convert n1
-	char *argument_1 = argv[1];
-	is_neg = argument_1[0] == '-' ? 1 : 0;	// if '-' then 1 else 0
-	for (int i = is_neg; argument_1[i] != '\0'; ++i) {
-		if (argument_1[i] > '9' || argument_1[i] < '0') {
-			printf("Only numbers!\n");
-			return -1;
-		}
-		digit = (int)argument_1[i] - (int)'0';
-		n1 *= 10;
-		n1 += digit;
+	n1 = str_to_number(argv[1]);
+	if (n1.error) {
+		printf("Encountered error %i\n", n1.error);
+		return n1.error;
 	}
-	if (is_neg) {
-		n1 *= -1;
-	}
-
-	// convert n2
-	char *argument_2 = argv[2];
-	is_neg = argument_2[0] == '-' ? 1 : 0;
-	for (int i = is_neg; argument_2[i] != '\0'; ++i) {
-		if (argument_2[i] > '9' || argument_2[i] < '0') {
-			printf("Only numbers!\n");
-			return -1;
-		}
-		digit = argument_2[i] - '0';
-		n2 *= 10;
-		n2 += digit;
-	}
-	if (is_neg) {
-		n2 *= -1;
+	n2 = str_to_number(argv[2]);
+	if (n2.error) {
+		printf("Encountered error %i\n", n2.error);
+		return n2.error;
 	}
 
 	// sum of n1 and n2
-	printf("%i + %i = %i\n", n1, n2, n1 + n2);
+	printf("%i + %i = %i\n", n1.value, n2.value, n1.value + n2.value);
 	return 0;
 }
