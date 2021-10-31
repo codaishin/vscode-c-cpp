@@ -6,6 +6,7 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
+                "--std=c++98",
                 "-g",
                 "${file}",
                 "-o",

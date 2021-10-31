@@ -9,10 +9,14 @@
 		79,
 		99
 	],
-	// C/C++ Extension
+	// C/C++ Extension (intellisense, formatting, debugger)
 	"C_Cpp.default.cStandard": "c99",
-	// C/C++ Clang Command Adapter
+	"C_Cpp.default.cppStandard": "c++98",
+	// C/C++ Clang Command Adapter (linting)
 	"clang.cflags": [
 		"--std=c99",
+	],
+	"clang.cxxflags": [
+		"--std=c++98",
 	]
 }
