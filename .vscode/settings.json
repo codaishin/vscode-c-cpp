@@ -1,5 +1,5 @@
 {
-	// General Settings
+	// General Settings:
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
 	"editor.formatOnSave": true,
@@ -9,17 +9,17 @@
 		79,
 		99
 	],
-	// C/C++ Extension (intellisense, formatting, debugger)
+	// C/C++ Extension (intellisense, formatting, debugger):
 	"C_Cpp.default.cStandard": "c99",
 	"C_Cpp.default.cppStandard": "c++98",
-	// C/C++ Clang Command Adapter (linting)
+	// C/C++ Clang Command Adapter (linting):
 	"clang.cflags": [
 		"--std=c99",
 	],
 	"clang.cxxflags": [
 		"--std=c++98",
 	],
-	// Python example settings (for Python extension)
+	// Python example settings (for Python extension):
 	"python.pythonPath": "env/bin/python",
 	"python.formatting.provider": "black",
 	"python.formatting.blackArgs": [
@@ -47,5 +47,17 @@
 		},
 		"editor.tabSize": 4,
 		"editor.insertSpaces": true,
+	},
+	// javasctipt/typescript:
+	// Formatting handled by ESLint extensionsion, which
+	// is configured with .elsintrc.json
+	// an example .eslintrc.json is provided
+	"[javascript]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2,
+	},
+	"[typescript]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 2,
 	},
 }
