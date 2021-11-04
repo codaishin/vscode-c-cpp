@@ -125,7 +125,7 @@ Incompatible return value type (got "str", expected "int") mypy(error)
 ### Install dependencies
 
 ```console
-$ pip install pylint black mypy
+$ python -m pip install pylint black mypy
 ```
 
 ### Test with test script
