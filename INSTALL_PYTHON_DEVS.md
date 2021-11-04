@@ -22,10 +22,11 @@ your workspace `.vscode/settings.json`
 # Install dependencies
 
 
-## In Environemnt (recommended)
+## Option 1: In Environemnt (recommended)
 
 The name of the environment will be ".env" in this example.
-But you can name it whatever you want.
+But you can name it whatever you want. If you do, you neet to change
+`python.defaultInterpreterPath` in `.vscode/settings.json`
 
 This approach is used to install dependencies for a given python program
 inside an environment. The python program should then always be run from
@@ -119,7 +120,11 @@ Incompatible return value type (got "str", expected "int") mypy(error)
 ```
 
 
-## Globally (NOT recommended)
+## Option 2: Globally (NOT recommended)
+
+This approach is simpler, but not recommended.
+If you choose this approach you need to change `python.defaultInterpreterPath`
+in `python.defaultInterpreterPath` to you `/usr/bin/python`.
 
 
 ### Install dependencies
