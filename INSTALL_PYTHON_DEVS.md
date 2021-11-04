@@ -13,6 +13,12 @@ Python 3.9.7
 ```
 
 
+# Settings
+
+Copy the python settings from the provided `.vscode/settings.json` into
+your workspace `.vscode/settings.json`
+
+
 # Install dependencies
 
 
