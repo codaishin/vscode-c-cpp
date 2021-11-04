@@ -1,4 +1,8 @@
 
+# Install Python extension
+
+Install python extension in VSCode
+
 
 # Install Python
 
@@ -8,28 +12,42 @@ $ python --version
 Python 3.9.7
 ```
 
-# Install Python extension
-
-Install python extension in VSCode
 
 # Install dependencies
+
 
 ## In Environemnt (recommended)
 
 The name of the environment will be ".env" in this example.
-But you can name it, what you want.
+But you can name it whatever you want.
+
+This approach is used to install dependencies for a given python program
+inside an environment. The python program should then always be run from
+within this environment.
+
+This approach allows enables us to use different environments for different
+use cases/programs. This is especially helpful, if different programs have
+conflicting dependencies.
+
+
+### Install environment
+```console
+$ python -m venv .env
+```
+
 
 ### Enter environment
 ```console
-$ python -m venv .env
 $ source .env/bin/activate
 ```
+
 
 ### Install dependencies
 
 ```console
 (.env) $ pip install pylint black mypy
 ```
+
 
 ### Test with test script
 
@@ -71,7 +89,7 @@ Run the file with:
 (.env) $ python ./main.py
 ```
 
-The folling statements should cause a series of problems:
+The folling statements should cause a series of problems on save:
 ```python
 def sum(a: int, b: int) -> int:
     return "I tricked you"
@@ -98,11 +116,13 @@ Incompatible return value type (got "str", expected "int") mypy(error)
 
 ## Globally (NOT recommended)
 
+
 ### Install dependencies
 
 ```console
 $ pip install pylint black mypy
 ```
+
 
 ### Test with test script
 
@@ -144,7 +164,7 @@ Run the file with:
 $ python ./main.py
 ```
 
-The folling statements should cause a series of problems:
+The folling statements should cause a series of problems on save:
 ```python
 def sum(a: int, b: int) -> int:
     return "I tricked you"
