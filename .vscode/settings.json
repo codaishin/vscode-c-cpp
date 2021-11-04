@@ -20,14 +20,13 @@
 		"--std=c++98",
 	],
 	// Python example settings (for Python extension):
-	"python.pythonPath": "env/bin/python",
+	"python.defaultInterpreterPath": ".env/bin/python",
 	"python.formatting.provider": "black",
 	"python.formatting.blackArgs": [
 		"--line-length=79",
 	],
 	"python.linting.enabled": true,
 	"python.linting.mypyEnabled": true,
-	"python.linting.mypyPath": "env/bin/mypy",
 	"python.linting.mypyArgs": [
 		"--follow-imports=silent",
 		"--show-column-numbers",
