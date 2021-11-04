@@ -25,9 +25,8 @@ This approach is used to install dependencies for a given python program
 inside an environment. The python program should then always be run from
 within this environment.
 
-This approach allows enables us to use different environments for different
-use cases/programs. This is especially helpful, if different programs have
-conflicting dependencies.
+This enables us to use different environments for different programs. This is
+especially helpful when different programs have conflicting dependencies.
 
 
 ### Install environment
@@ -122,7 +121,6 @@ Incompatible return value type (got "str", expected "int") mypy(error)
 ```console
 $ pip install pylint black mypy
 ```
-
 
 ### Test with test script
 
