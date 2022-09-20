@@ -5,7 +5,12 @@ replaced by downloading with `wget` and unpacking.
 
 ### I - Install git
 ```console
-> sudo pacman -S git
+> sudo pacman -Sy git
+```
+
+### Ib - Install devel (for makepkg)
+```console
+> sudo pacman -Sy base-devel
 ```
 
 ### II - Clone vscode
@@ -17,7 +22,7 @@ replaced by downloading with `wget` and unpacking.
 ### III - Build vscode package
 ```console
 > cd visual-studio-code-bin/
-> makepgk -s
+> makepkg -s
 ```
 
 ### IV - Install vscode package
